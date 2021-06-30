@@ -1,0 +1,11 @@
+{%extends "book/base.html"%}
+{% load crispy_forms_tags %}
+{%block content%}
+    <h4 class="border-bottom py-3">Edit User</h4>
+    <form method="post" >
+        {% csrf_token %}
+        {{form|crispy}}
+        <button type="submit" class="mt-4 btn btn-light">Save Changes</button>
+        <a href="/account/" class="btn btn-danger mt-4 mx-3">Cancel</a>
+    </form>
+{%endblock content%}

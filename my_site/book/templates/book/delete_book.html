@@ -1,0 +1,9 @@
+{%extends "book/base.html"%}
+{%block content%}
+  <h2>Are you sure you want to delete book "{{book.title}}"?</h2>
+  <form method="post" class="d-flex">
+     {% csrf_token %}
+     <button type="submit" class="mt-4 btn btn-danger">Yes, i'm sure</button>
+     <a href="/genres/{{genre.id}}" class="btn mt-4 mx-3 btn-success ">Cancel</a>
+  </form>
+{%endblock content%}
